@@ -14,11 +14,18 @@ public class OnlinerBasePage extends BasePage {
     @FindBy (xpath = "//div[contains(@class, 'b-top-profile__image ')]")
     private WebElementFacade profileImage;
 
+    @FindBy (xpath = "//a[@href='https://catalog.onliner.by/']")
+    private WebElementFacade catalogPage;
+
     public void openLogInPage() {
         loginButton.click();
     }
 
     public void verifyProfileImageAppears() {
         profileImage.shouldBeVisible();
+    }
+
+    public void openCatalogPage() {
+        catalogPage.click();
     }
 }

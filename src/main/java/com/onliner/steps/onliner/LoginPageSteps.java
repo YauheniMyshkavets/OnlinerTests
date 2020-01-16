@@ -6,7 +6,6 @@ import com.onliner.steps.onliner.common.CommonSteps;
 import net.thucydides.core.annotations.Step;
 
 public class LoginPageSteps extends CommonSteps {
-    OnlinerBasePage onlinerBasePage;
     LoginPage loginPage;
 
     @Step

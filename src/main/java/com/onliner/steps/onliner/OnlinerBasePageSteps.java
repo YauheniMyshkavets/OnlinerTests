@@ -22,4 +22,9 @@ public class OnlinerBasePageSteps extends CommonSteps {
         onlinerBasePage.verifyProfileImageAppears();
     }
 
+    @Step
+    public void openCatalogPage() {
+        onlinerBasePage.openCatalogPage();
+    }
+
 }
