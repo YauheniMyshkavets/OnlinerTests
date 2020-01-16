@@ -10,11 +10,25 @@ public class CartPage extends MainPage {
     @FindBy (xpath = "//div[contains(@class, 'cart-form__description_condensed-other')]/a")
     private WebElementFacade productInCartTitle;
 
+    @FindBy (xpath = "//a[@class='button-style button-style_primary button-style_small cart-form__button']")
+    private WebElementFacade checkoutButton;
+
+    @FindBy (className = "cart-form__choise-item")
+    private WebElementFacade checkoutForm;
+
     public void verifyCartPageAppears() {
         cartTitle.shouldBeVisible();
     }
 
     public String verifyCartPageContainRightItem(String productNameInGallery) {
         return productInCartTitle.getText();
+    }
+
+    public void openCheckoutPage() {
+        checkoutButton.click();
+    }
+
+    public void verifyCheckoutFormAppears() {
+        checkoutForm.shouldBeVisible();
     }
 }

@@ -15,4 +15,12 @@ public class CartPageSteps extends CommonSteps {
     public String verifyCartPageContainRightItem(String productNameInGallery) {
         return cartPage.verifyCartPageContainRightItem(productNameInGallery);
     }
+
+    public void openCheckoutForm() {
+        cartPage.openCheckoutPage();
+    }
+
+    public void verifyCheckoutFormAppears() {
+        cartPage.verifyCheckoutFormAppears();
+    }
 }

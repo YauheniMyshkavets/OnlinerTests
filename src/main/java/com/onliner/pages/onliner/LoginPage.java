@@ -10,7 +10,7 @@ public class LoginPage extends MainPage {
     @FindBy(xpath = "//input[@type='password']")
     private WebElementFacade fieldPassword;
 
-    @FindBy(xpath = "//button[contains(@class, 'auth-button')]")
+    @FindBy(xpath = "//button[@class='auth-button auth-button_primary auth-button_middle auth-form__button auth-form__button_width_full']")
     private WebElementFacade signInButton;
 
     public void enterEmail(String email) {

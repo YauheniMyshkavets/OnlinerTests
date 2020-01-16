@@ -40,12 +40,29 @@ public class BaseTemplateOnliner {
     }
 
     public void logIn(){
-        mainPageSteps.openURL();
-        //mainPageSteps.openLogInPage();
         loginPageSteps.verifyLogInPageAppears();
         loginPageSteps.enterEmail("zak820@gmail.com");
         loginPageSteps.enterPassword("2099663yauheni");
         loginPageSteps.clickSignIn();
+    }
+
+    public void addItemInCart() {
+        mainPageSteps.openCatalogPage();
+
+        catalogPageSteps.verifyCatalogPageAppears();
+        catalogPageSteps.selectMobilePhonesCategory();
+
+        galleryPageSteps.verifyGalleryPageAppears();
+        String productNameInGallery = galleryPageSteps.getFirstProductName();
+        galleryPageSteps.openFirstProduct();
+
+        productDetailPageSteps.verifyProductDetailPageContainRightItem(productNameInGallery);
+        productDetailPageSteps.addToCart();
+
+        mainPageSteps.openCartPage();
+
+        cartPageSteps.verifyCartPageAppears();
+        cartPageSteps.verifyCartPageContainRightItem(productNameInGallery);
     }
 
 }
