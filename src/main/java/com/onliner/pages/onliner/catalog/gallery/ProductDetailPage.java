@@ -12,6 +12,9 @@ public class ProductDetailPage extends MainPage {
     @FindBy (className = "catalog-masthead__title")
     private WebElementFacade productTitle;
 
+    @FindBy (id = "cart-desktop")
+    private WebElementFacade cartButton;
+
     public void addToCart() {
         addToCartButton.click();
     }
@@ -19,5 +22,9 @@ public class ProductDetailPage extends MainPage {
     public void verifyProductDetailPageContainRightItem(String productNameInGallery) {
         String productNameInPDP = productTitle.getText();
         Assert.assertEquals(productNameInPDP, productNameInGallery);
+    }
+
+    public void openCart() {
+        cartButton.click();
     }
 }

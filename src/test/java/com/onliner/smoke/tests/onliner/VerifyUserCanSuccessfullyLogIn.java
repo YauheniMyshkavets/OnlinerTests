@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class VerifyUserCanSuccessfullyLogIn extends BaseTemplateOnliner {
 
-    String email = "zak820@gmail.com";
+    String email = "prevutester1@gmail.com";
     String password = "2099663yauheni";
 
     @Test

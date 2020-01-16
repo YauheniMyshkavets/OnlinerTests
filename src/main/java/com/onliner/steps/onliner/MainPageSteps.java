@@ -31,5 +31,4 @@ public class MainPageSteps extends CommonSteps {
     public void openCartPage() {
         mainPage.openCartPage();
     }
-
 }

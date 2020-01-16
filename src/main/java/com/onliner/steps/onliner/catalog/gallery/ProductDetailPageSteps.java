@@ -12,7 +12,13 @@ public class ProductDetailPageSteps extends CommonSteps {
         productDetailPage.addToCart();
     }
 
+    @Step
     public void verifyProductDetailPageContainRightItem(String productNameInGallery) {
         productDetailPage.verifyProductDetailPageContainRightItem(productNameInGallery);
+    }
+
+    @Step
+    public void openCart() {
+        productDetailPage.openCart();
     }
 }

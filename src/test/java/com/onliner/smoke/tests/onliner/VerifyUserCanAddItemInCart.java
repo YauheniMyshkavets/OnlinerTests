@@ -8,8 +8,6 @@ public class VerifyUserCanAddItemInCart extends BaseTemplateOnliner {
     @Test
     public void verifyUserCanAddItemInCart() {
         openSite();
-//        mainPageSteps.openLogInPage();
-//        logIn();
         mainPageSteps.openCatalogPage();
 
         catalogPageSteps.verifyCatalogPageAppears();

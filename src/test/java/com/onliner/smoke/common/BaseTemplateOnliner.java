@@ -40,13 +40,15 @@ public class BaseTemplateOnliner {
     }
 
     public void logIn(){
+        mainPageSteps.openLogInPage();
         loginPageSteps.verifyLogInPageAppears();
-        loginPageSteps.enterEmail("zak820@gmail.com");
+        loginPageSteps.enterEmail("prevutester1@gmail.com");
         loginPageSteps.enterPassword("2099663yauheni");
         loginPageSteps.clickSignIn();
+        mainPageSteps.verifyProfileImageAppears();
     }
 
-    public void addItemInCart() {
+    public void addItemToCart() {
         mainPageSteps.openCatalogPage();
 
         catalogPageSteps.verifyCatalogPageAppears();
@@ -58,11 +60,5 @@ public class BaseTemplateOnliner {
 
         productDetailPageSteps.verifyProductDetailPageContainRightItem(productNameInGallery);
         productDetailPageSteps.addToCart();
-
-        mainPageSteps.openCartPage();
-
-        cartPageSteps.verifyCartPageAppears();
-        cartPageSteps.verifyCartPageContainRightItem(productNameInGallery);
     }
-
 }

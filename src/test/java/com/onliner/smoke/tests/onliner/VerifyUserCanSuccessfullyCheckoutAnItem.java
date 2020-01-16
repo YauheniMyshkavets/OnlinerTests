@@ -8,10 +8,12 @@ public class VerifyUserCanSuccessfullyCheckoutAnItem extends BaseTemplateOnliner
     @Test
     public void verifyUserCanSuccessfullyCheckoutAnItem() {
         openSite();
-        mainPageSteps.openLogInPage();
         logIn();
-        addItemInCart();
+        addItemToCart();
 
+        productDetailPageSteps.openCart();
+
+        cartPageSteps.verifyCartPageAppears();
         cartPageSteps.openCheckoutForm();
         cartPageSteps.verifyCheckoutFormAppears();
     }

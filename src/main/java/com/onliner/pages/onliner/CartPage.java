@@ -13,7 +13,7 @@ public class CartPage extends MainPage {
     @FindBy (xpath = "//a[@class='button-style button-style_primary button-style_small cart-form__button']")
     private WebElementFacade checkoutButton;
 
-    @FindBy (className = "cart-form__choise-item")
+    @FindBy (xpath = "//div[@class='cart-form__description-part cart-form__description-part_1']")
     private WebElementFacade checkoutForm;
 
     public void verifyCartPageAppears() {
