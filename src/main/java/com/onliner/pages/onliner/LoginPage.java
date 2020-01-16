@@ -3,7 +3,7 @@ package com.onliner.pages.onliner;
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
 
-public class LoginPage extends OnlinerBasePage {
+public class LoginPage extends MainPage {
     @FindBy(xpath = "//input[contains(@placeholder, 'e-mail')]")
     private WebElementFacade fieldEmail;
 

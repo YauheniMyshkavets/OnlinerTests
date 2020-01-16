@@ -11,11 +11,11 @@ public class VerifyUserCanSuccessfullyLogIn extends BaseTemplateOnliner {
     @Test
     public void verifyUserCanSuccessfullyLogIn() {
         openSite();
-        onlinerBasePageSteps.openLogInPage();
+        mainPageSteps.openLogInPage();
         loginPageSteps.verifyLogInPageAppears();
         loginPageSteps.enterEmail(email);
         loginPageSteps.enterPassword(password);
         loginPageSteps.clickSignIn();
-        onlinerBasePageSteps.verifyProfileImageAppears();
+        mainPageSteps.verifyProfileImageAppears();
     }
 }

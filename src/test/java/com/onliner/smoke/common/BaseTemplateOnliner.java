@@ -1,12 +1,13 @@
 package com.onliner.smoke.common;
 
 import com.onliner.pages.onliner.catalog.gallery.GalleryPage;
+import com.onliner.steps.onliner.CartPageSteps;
 import com.onliner.steps.onliner.LoginPageSteps;
-import com.onliner.steps.onliner.OnlinerBasePageSteps;
+import com.onliner.steps.onliner.MainPageSteps;
 import com.onliner.steps.onliner.catalog.CatalogPageSteps;
+import com.onliner.steps.onliner.catalog.gallery.ProductDetailPageSteps;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
-import net.thucydides.core.annotations.Step;
 import net.thucydides.core.annotations.Steps;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
@@ -26,15 +27,21 @@ public class BaseTemplateOnliner {
     public GalleryPage galleryPageSteps;
 
     @Steps
-    public OnlinerBasePageSteps onlinerBasePageSteps;
+    public MainPageSteps mainPageSteps;
+
+    @Steps
+    public ProductDetailPageSteps productDetailPageSteps;
+
+    @Steps
+    public CartPageSteps cartPageSteps;
 
     public void openSite() {
-        onlinerBasePageSteps.openURL();
+        mainPageSteps.openURL();
     }
 
     public void logIn(){
-        onlinerBasePageSteps.openURL();
-        onlinerBasePageSteps.openLogInPage();
+        mainPageSteps.openURL();
+        //mainPageSteps.openLogInPage();
         loginPageSteps.verifyLogInPageAppears();
         loginPageSteps.enterEmail("zak820@gmail.com");
         loginPageSteps.enterPassword("2099663yauheni");

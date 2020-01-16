@@ -7,12 +7,23 @@ public class VerifyUserCanAddItemInCart extends BaseTemplateOnliner {
 
     @Test
     public void verifyUserCanAddItemInCart() {
-        logIn();
-        onlinerBasePageSteps.openCatalogPage();
+        //logIn();
+        openSite();
+        mainPageSteps.openCatalogPage();
+
+        catalogPageSteps.verifyCatalogPageAppears();
         catalogPageSteps.selectMobilePhonesCategory();
+
+        galleryPageSteps.verifyGalleryPageAppears();
+        String productNameInGallery = galleryPageSteps.getFirstProductName();
         galleryPageSteps.openFirstProduct();
-        int i = 0;
 
+        productDetailPageSteps.verifyProductDetailPageContainRightItem(productNameInGallery);
+        productDetailPageSteps.addToCart();
+
+        mainPageSteps.openCartPage();
+
+        cartPageSteps.verifyCartPageAppears();
+        cartPageSteps.verifyCartPageContainRightItem(productNameInGallery);
     }
-
 }

@@ -1,7 +1,6 @@
 package com.onliner.steps.onliner;
 
 import com.onliner.pages.onliner.LoginPage;
-import com.onliner.pages.onliner.OnlinerBasePage;
 import com.onliner.steps.onliner.common.CommonSteps;
 import net.thucydides.core.annotations.Step;
 

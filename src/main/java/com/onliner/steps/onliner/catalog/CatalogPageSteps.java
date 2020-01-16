@@ -11,4 +11,9 @@ public class CatalogPageSteps extends CommonSteps {
     public void selectMobilePhonesCategory() {
         catalogPage.selectMobilePhonesCategory();
     }
+
+    @Step
+    public void verifyCatalogPageAppears() {
+        catalogPage.verifyCatalogPageAppears();
+    }
 }

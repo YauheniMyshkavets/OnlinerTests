@@ -11,4 +11,14 @@ public class GalleryPageSteps extends CommonSteps {
     public void openFirstProduct() {
         galleryPage.openFirstProduct();
     }
+
+    @Step
+    public void verifyGalleryPageAppears() {
+        galleryPage.verifyGalleryPageAppears();
+    }
+
+    @Step
+    public String getFirstProductName() {
+       return galleryPage.getFirstProductName();
+    }
 }
