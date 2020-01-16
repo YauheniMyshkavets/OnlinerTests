@@ -11,7 +11,14 @@ public class OnlinerBasePage extends BasePage {
     @FindBy (xpath = "//div[@class='auth-bar__item auth-bar__item--text']")
     private WebElementFacade loginButton;
 
-    public void openLoginPage() {
+    @FindBy (xpath = "//div[contains(@class, 'b-top-profile__image ')]")
+    private WebElementFacade profileImage;
+
+    public void openLogInPage() {
         loginButton.click();
+    }
+
+    public void verifyProfileImageAppears() {
+        profileImage.shouldBeVisible();
     }
 }

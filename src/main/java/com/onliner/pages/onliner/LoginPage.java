@@ -7,9 +7,26 @@ public class LoginPage extends OnlinerBasePage {
     @FindBy(xpath = "//input[contains(@placeholder, 'e-mail')]")
     private WebElementFacade fieldEmail;
 
-    @FindBy(name = "password")
+    @FindBy(xpath = "//input[@type='password']")
     private WebElementFacade fieldPassword;
 
-    @FindBy(className = "auth0-label-submit")
-    private WebElementFacade buttonSignIn;
+    @FindBy(xpath = "//button[contains(@class, 'auth-button')]")
+    private WebElementFacade signInButton;
+
+    public void enterEmail(String email) {
+        fieldEmail.sendKeys(email);
+    }
+
+    public void enterPassword(String password) {
+        fieldPassword.sendKeys(password);
+    }
+
+    public void clickSignIn() {
+        signInButton.click();
+    }
+
+    public void verifyLogInPageAppears() {
+        fieldPassword.shouldBeVisible();
+        fieldEmail.shouldBeVisible();
+    }
 }
